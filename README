@@ -1,0 +1,30 @@
+Code copyright (c) 2011 David Klein and Simon Weber
+
+Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
+
+
+
+To add a folder source code to the database:
+./addToDatabase.sh
+
+Note that you have to edit the shell script if you want to add code from a language that's not already in the shell script.
+
+To add code manually to the database:
+python reader.py -l language < myfile
+
+Where language is the language that the file is written in and myfile is the name of the source code file.
+
+
+To attempt to identify the language of a piece of source code:
+python identifylanguage.py < source_code_file
+
+i.e.
+python identifylanguage.py < sample.c
+
+You can also type:
+python identifylanguage.py -v < source_code_file
+
+This gives you verbose output.
+
+
+Code intended for Python 2.7.2 on linux.
